@@ -37,6 +37,6 @@ loginForm: FormGroup;
           (error) => {
             this.snackBar.open('Credenciais inválidas!', 'Ok', {duration: 4000});
           }
-      ).unsubscribe()
+      )
   }
 }

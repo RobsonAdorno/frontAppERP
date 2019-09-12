@@ -12,7 +12,7 @@ export class LoginService {
 
   login(crendencials: {login:string, password:string}):Observable<any> {
      return this.http
-     .post(`${baseUrl.loginURI}`, crendencials, {
+     .post(`localhost:8080/login`, crendencials, {
        responseType: 'text',
        observe: 'response',
      })
