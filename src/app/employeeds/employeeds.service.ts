@@ -12,7 +12,7 @@ export class EmployeedsService {
   constructor(private http:HttpClient) { }
 
   getEmployeeds():Observable<Employeeds[]> {
-    return this.http.get<Employeeds[]>(`${baseUrl.employeedURI}`)
+    return this.http.get<Employeeds[]>(`${'as'}`)
                 .pipe(
                   catchError((error) => {
                     return throwError(error)

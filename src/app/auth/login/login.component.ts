@@ -20,7 +20,7 @@ loginForm: FormGroup;
 
   createForm() {
     this.loginForm = this.fb.group({
-      login: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
@@ -37,6 +37,6 @@ loginForm: FormGroup;
           (error) => {
             this.snackBar.open('Credenciais inválidas!', 'Ok', {duration: 4000});
           }
-      ).unsubscribe()
+      )
   }
 }
